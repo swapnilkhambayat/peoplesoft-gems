@@ -81,3 +81,4 @@ Ask PeopleSoft Gems should:
 ## V1 constraint
 
 Do not build a separate Python/FastAPI service initially. Add a worker or Python service later only if ingestion or document processing becomes awkward inside the main application.
+

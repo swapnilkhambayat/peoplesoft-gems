@@ -1,0 +1,483 @@
+[
+  {
+    "id": "oracle-pt863-ib-gateway-exceptions",
+    "title": "Integration Gateway Exception Types",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/integration-gateway-exception-types.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Integration",
+    "subcategory": "Integration Broker",
+    "tags": [
+      "Integration Broker",
+      "HTTP",
+      "Gateway",
+      "REST",
+      "Troubleshooting"
+    ],
+    "summary": "Defines Integration Broker gateway exception types, including HTTP target connector behavior when an external system returns HTTP status 500.",
+    "useful_for": [
+      "Integration Broker REST service returns HTTP 500",
+      "External endpoint returns 500"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Defines Integration Broker gateway exception types, including HTTP target connector behavior when an external system returns HTTP status 500."
+    ],
+    "why_useful": "Integration Broker REST service returns HTTP 500",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt863-ib-common-issues",
+    "title": "Handling Common Issues",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/handling-common-issues.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Integration",
+    "subcategory": "Integration Broker",
+    "tags": [
+      "Integration Broker",
+      "Service Operations Monitor",
+      "Logs",
+      "Troubleshooting"
+    ],
+    "summary": "Provides an Oracle troubleshooting table for application server exceptions, message handlers, Integration Gateway settings, message logs and queue status.",
+    "useful_for": [
+      "Integration Broker 500",
+      "Integration Broker troubleshooting",
+      "Service operation failures"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Provides an Oracle troubleshooting table for application server exceptions, message handlers, Integration Gateway settings, message logs and queue status."
+    ],
+    "why_useful": "Integration Broker 500",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt863-ib-enable-gateway-logging",
+    "title": "Enabling Integration Gateway Message Logging in the Service Operations Monitor",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker-service-operations-monitor/enabling-integration-gateway-message-logging-service-operations-monitor.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Integration",
+    "subcategory": "Integration Broker",
+    "tags": [
+      "Gateway Logging",
+      "Service Operations Monitor",
+      "Diagnostics"
+    ],
+    "summary": "Explains how to enable gateway logging from Monitor Setup Options and choose the on-demand logging level.",
+    "useful_for": [
+      "Integration Broker HTTP errors",
+      "Capture outbound request response",
+      "Gateway diagnostics"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Explains how to enable gateway logging from Monitor Setup Options and choose the on-demand logging level."
+    ],
+    "why_useful": "Integration Broker HTTP errors",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt863-ci-save",
+    "title": "Save method: Component Interface class",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/peoplecode-api-reference/save-9.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Development",
+    "subcategory": "Component Interface",
+    "tags": [
+      "Component Interface",
+      "Save",
+      "PSMessages",
+      "PeopleCode"
+    ],
+    "summary": "Documents that Component Interface Save returns Boolean success/failure, runs standard save business rules, and logs multiple errors to the PSMessages collection.",
+    "useful_for": [
+      "Component Interface Save returns False",
+      "CI validation errors",
+      "CI PSMessages"
+    ],
+    "has_code_examples": true,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 95,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Documents that Component Interface Save returns Boolean success/failure, runs standard save business rules, and logs multiple errors to the PSMessages collection."
+    ],
+    "why_useful": "Component Interface Save returns False",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt863-ci-stop-first-error",
+    "title": "StopOnFirstError property: Component Interface class",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/peoplecode-api-reference/stoponfirsterror.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Development",
+    "subcategory": "Component Interface",
+    "tags": [
+      "Component Interface",
+      "StopOnFirstError",
+      "InteractiveMode"
+    ],
+    "summary": "Explains how StopOnFirstError changes Component Interface processing, including behavior when InteractiveMode is false.",
+    "useful_for": [
+      "Component Interface Save returns False",
+      "CI error handling"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Explains how StopOnFirstError changes Component Interface processing, including behavior when InteractiveMode is false."
+    ],
+    "why_useful": "Component Interface Save returns False",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt863-sqlexec",
+    "title": "SQLExec function",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/peoplecode-language-reference/sqlexec.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Development",
+    "subcategory": "PeopleCode",
+    "tags": [
+      "PeopleCode",
+      "SQLExec",
+      "SQL",
+      "Bind Variables"
+    ],
+    "summary": "Authoritative SQLExec reference covering syntax, bind/output variables, single-row SELECT behavior, DML event restrictions, meta-SQL and maintenance considerations.",
+    "useful_for": [
+      "PeopleCode SQLExec",
+      "SQLExec no rows",
+      "PeopleCode database access"
+    ],
+    "has_code_examples": true,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 95,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Authoritative SQLExec reference covering syntax, bind/output variables, single-row SELECT behavior, DML event restrictions, meta-SQL and maintenance considerations."
+    ],
+    "why_useful": "PeopleCode SQLExec",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt863-component-build-update",
+    "title": "Component Build Processing in Update Modes",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/peoplecode-developer-s-guide/component-build-processing-update-modes.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Development",
+    "subcategory": "PeopleCode",
+    "tags": [
+      "RowInit",
+      "PostBuild",
+      "Activate",
+      "Component Processor",
+      "PeopleCode Events"
+    ],
+    "summary": "Documents the component build sequence in update modes: PreBuild, default processing, RowInit, PostBuild, Activate and display.",
+    "useful_for": [
+      "Difference between RowInit PostBuild PageActivate",
+      "PeopleCode event order"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Documents the component build sequence in update modes: PreBuild, default processing, RowInit, PostBuild, Activate and display."
+    ],
+    "why_useful": "Difference between RowInit PostBuild PageActivate",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "oracle-pt861-ae-tracing",
+    "title": "PeopleTools 8.61 Application Engine — Tracing Application Engine Programs",
+    "url": "https://docs.oracle.com/cd/F88570_01/psft/pdf/pt861tape-b012024.pdf",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.61"
+    ],
+    "category": "Development",
+    "subcategory": "Application Engine",
+    "tags": [
+      "Application Engine",
+      "SQL Trace",
+      "AET",
+      "Performance",
+      "Troubleshooting"
+    ],
+    "summary": "Documents Application Engine step trace, SQL trace, statement timings and database optimizer tracing, including trace-result sections.",
+    "useful_for": [
+      "Application Engine runs but does not insert rows",
+      "Application Engine SQL troubleshooting"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 90,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 65
+    },
+    "takeaways": [
+      "Documents Application Engine step trace, SQL trace, statement timings and database optimizer tracing, including trace-result sections."
+    ],
+    "why_useful": "Application Engine runs but does not insert rows",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "rest-consumer",
+    "title": "Using PeopleCode to Manage Consumer REST Service Operations",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/using-peoplecode-manage-consumer-rest-service-operations.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Integration",
+    "subcategory": "REST",
+    "tags": [
+      "REST",
+      "Call an external REST API from PeopleCode",
+      "SyncRequest REST API"
+    ],
+    "summary": "Instantiate the service operation message, populate its URI document, select the URI resource index, and invoke SyncRequest. Inspect the response status and fault handling.",
+    "useful_for": [
+      "Call an external REST API from PeopleCode",
+      "SyncRequest REST API"
+    ],
+    "has_code_examples": true,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 95,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Instantiate the service operation message, populate its URI document, select the URI resource index, and invoke SyncRequest. Inspect the response status and fault handling."
+    ],
+    "why_useful": "Call an external REST API from PeopleCode",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "rest-security",
+    "title": "Securing Consumer REST Service Operations",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/securing-consumer-rest-service-operations.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Integration",
+    "subcategory": "REST",
+    "tags": [
+      "REST",
+      "Integration Broker 401 authentication",
+      "OAuth2 REST security"
+    ],
+    "summary": "Describes TLS, routing authentication settings, and OAuth2 service applications for consumer REST requests.",
+    "useful_for": [
+      "Integration Broker 401 authentication",
+      "OAuth2 REST security"
+    ],
+    "has_code_examples": true,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 95,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "Describes TLS, routing authentication settings, and OAuth2 service applications for consumer REST requests."
+    ],
+    "why_useful": "Integration Broker 401 authentication",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "rowset-delete",
+    "title": "DeleteRow method: Rowset class",
+    "url": "https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/peoplecode-api-reference/deleterow.html",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [
+      "8.63"
+    ],
+    "category": "Development",
+    "subcategory": "PeopleCode",
+    "tags": [
+      "PeopleCode",
+      "Delete a level-1 rowset row",
+      "PeopleCode grid row deletion"
+    ],
+    "summary": "DeleteRow marks component-buffer rows for deletion at save time. Run it from a parent rowset and delete bottom-up in loops; standalone rowsets do not automatically update the database.",
+    "useful_for": [
+      "Delete a level-1 rowset row",
+      "PeopleCode grid row deletion"
+    ],
+    "has_code_examples": true,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 95,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "DeleteRow marks component-buffer rows for deletion at save time. Run it from a parent rowset and delete bottom-up in loops; standalone rowsets do not automatically update the database."
+    ],
+    "why_useful": "Delete a level-1 rowset row",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  },
+  {
+    "id": "ora-01427",
+    "title": "ORA-01427: single-row subquery returns more than one row",
+    "url": "https://docs.oracle.com/en/error-help/db/ora-01427/",
+    "source": "Oracle",
+    "source_type": "Official Documentation",
+    "peopletools_versions": [],
+    "category": "Database",
+    "subcategory": "Oracle SQL",
+    "tags": [
+      "Oracle SQL",
+      "ORA-01427",
+      "single-row subquery returns more than one row",
+      "Oracle duplicate rows"
+    ],
+    "summary": "A subquery returned multiple rows where one was expected. Use a suitable multi-value comparison or rewrite the query to return one row, according to the intended result.",
+    "useful_for": [
+      "ORA-01427",
+      "single-row subquery returns more than one row",
+      "Oracle duplicate rows"
+    ],
+    "has_code_examples": false,
+    "last_checked": "2026-11-01",
+    "status": "approved",
+    "difficulty": "Intermediate",
+    "summary_origin": "AI-assisted summary, checked against linked documentation",
+    "scores": {
+      "depth": 85,
+      "practical": 85,
+      "source": 100,
+      "clarity": 85,
+      "freshness": 90
+    },
+    "takeaways": [
+      "A subquery returned multiple rows where one was expected. Use a suitable multi-value comparison or rewrite the query to return one row, according to the intended result."
+    ],
+    "why_useful": "ORA-01427",
+    "review_note": "Source reviewed November 1, 2026. Ratings are editorial judgments, not measured accuracy."
+  }
+]

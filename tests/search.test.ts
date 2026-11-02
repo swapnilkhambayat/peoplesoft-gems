@@ -1,0 +1,13 @@
+import {test} from 'node:test';
+import assert from 'node:assert/strict';
+import {search,gemScore,validateGem} from '../lib/search.ts';
+import type {Gem} from '../lib/search.ts';
+import {readFileSync} from 'node:fs';
+const gems=JSON.parse(readFileSync(new URL('../data/gems.json',import.meta.url),'utf8')) as Gem[];
+for(const [query,id] of [['Integration Broker REST service returns HTTP 500','oracle-pt863-ib-gateway-exceptions'],['CI Save() returns False','oracle-pt863-ci-save'],['AE not inserting rows','oracle-pt861-ae-tracing'],['How do I call an external REST API from PeopleCode?','rest-consumer'],['ORA-01427','ora-01427'],['Delete a level-1 rowset row','rowset-delete'],['PeopleCode SQLExec','oracle-pt863-sqlexec'],['Difference between RowInit PostBuild PageActivate','oracle-pt863-component-build-update']])test(query,()=>assert.equal(search(gems,query)[0]?.gem.id,id));
+test('unknown queries have no results',()=>assert.equal(search(gems,'quantum banana spaceship').length,0));
+test('combined filters cannot leak unrelated records',()=>assert.equal(search(gems,'',{topic:'Integration Broker',version:'8.61',examples:true}).length,0));
+test('drafts excluded and code/version filters honored',()=>{const rows=search([...gems,{...gems[0],id:'draft',status:'draft'}],'',{version:'8.63',examples:true});assert(rows.length>0);assert(rows.every(r=>r.gem.status==='approved'&&r.gem.has_code_examples&&r.gem.peopletools_versions.includes('8.63')))});
+test('scores match documented weights',()=>assert.equal(gemScore({...gems[0],scores:{depth:100,practical:0,source:0,clarity:0,freshness:0}}),25));
+test('seed schema, IDs and URLs valid',()=>{assert(gems.every(validateGem));assert.equal(new Set(gems.map(g=>g.id)).size,gems.length);assert.equal(new Set(gems.map(g=>g.url)).size,gems.length)});
+test('reject unsafe URLs, bad status and invalid scores',()=>{assert(!validateGem({...gems[0],url:'javascript:alert(1)'}));assert(!validateGem({...gems[0],status:'anything'}));assert(!validateGem({...gems[0],scores:{...gems[0].scores,source:101}}))});

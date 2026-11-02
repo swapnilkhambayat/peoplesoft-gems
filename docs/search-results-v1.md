@@ -99,3 +99,4 @@ Recommended retrieval order:
 - Gold accent only for active controls and Gem Score.
 - Blue reserved for source links/citations.
 - No right sidebar, charts, marketing panels, or recommendation carousels.
+

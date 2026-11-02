@@ -1,0 +1,4 @@
+import type {Metadata} from 'next';
+import './globals.css';
+export const metadata:Metadata={title:'PeopleSoft Gems',description:'Search less. Troubleshoot faster. Verify every answer.'};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body><a className="skip" href="#main">Skip to content</a><header><div className="nav shell"><a className="brand" href="/"><span className="mark">◆</span>PeopleSoft Gems<span className="version">V1</span></a><nav aria-label="Main navigation"><a href="/?browse=1">Browse</a><a href="/about">About</a><a href="/admin">Curate <span aria-hidden="true">↗</span></a></nav></div></header>{children}<footer className="shell"><span>PeopleSoft Gems · Independent developer resource</span><span>Original sources remain authoritative.</span></footer></body></html>}

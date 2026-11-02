@@ -67,3 +67,4 @@ Campus Solutions and FSCM remain part of the taxonomy, but initial content densi
 ## Success condition for the MVP
 
 A PeopleSoft developer should be able to enter a real technical problem, discover a few highly relevant resources quickly, understand why those resources are useful, and receive source-backed troubleshooting guidance without losing access to the original evidence.
+
