@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PeopleSoft Gems — Search Results V1</title>
+<style>
+:root{
+  --bg:#0b0f14;--panel:#10161e;--border:#263240;--text:#edf3f9;--muted:#8ea0b3;
+  --gold:#f6c453;--blue:#78b7ff;--green:#78d7a6;--red:#f08a8a;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+.shell{max-width:980px;margin:0 auto;padding:0 24px}
+header{border-bottom:1px solid var(--border);background:#0b0f14;position:sticky;top:0;z-index:5}
+.nav{min-height:68px;display:flex;align-items:center;gap:22px}
+.brand{display:flex;align-items:center;gap:9px;font-weight:750;white-space:nowrap}
+.mark{display:grid;place-items:center;width:27px;height:27px;border:1px solid #75632e;border-radius:7px;color:var(--gold)}
+.searchbar{flex:1;display:flex;gap:8px;padding:7px;border:1px solid #354352;background:#10161e;border-radius:11px}
+.searchbar input{flex:1;min-width:0;background:transparent;border:0;outline:0;color:var(--text);padding:8px 10px}
+.searchbar button{border:0;border-radius:8px;background:var(--gold);font-weight:750;padding:0 15px;color:#181208;cursor:pointer}
+.page{padding:32px 0 70px}
+.mode{display:flex;gap:18px;border-bottom:1px solid var(--border);margin-bottom:24px}
+.mode button{border:0;background:none;color:var(--muted);padding:0 0 10px;cursor:pointer;border-bottom:2px solid transparent}
+.mode .active{color:var(--text);border-color:var(--gold)}
+.queryline{color:var(--muted);font-size:13px;margin-bottom:12px}
+.queryline strong{color:var(--text)}
+.answer{border:1px solid #334151;border-radius:14px;background:var(--panel);padding:18px;margin-bottom:18px}
+.answerhead{display:flex;justify-content:space-between;gap:12px;align-items:center}
+.answerhead strong{font-size:14px}
+.badge{font-size:11px;color:var(--green);border:1px solid rgba(120,215,166,.25);padding:4px 7px;border-radius:999px}
+.answer p{color:#bdc9d5;font-size:14px;margin:12px 0 8px}
+.answer ol{margin:8px 0 12px;padding-left:20px;color:#b1c0ce;font-size:13px;line-height:1.7}
+.cite{color:var(--blue);font-size:12px}
+.ai-note{margin-top:14px;padding:11px 12px;border-left:2px solid #6b7887;background:#0c1218;color:#93a4b5;font-size:12px}
+.filters{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin:20px 0}
+.filter{border:1px solid var(--border);background:#0f151d;color:#9aabbb;padding:7px 10px;border-radius:8px;font-size:12px;cursor:pointer}
+.filter.active{border-color:#7c6932;color:#f5d57c;background:rgba(246,196,83,.05)}
+.resultcount{margin-left:auto;color:#677b8e;font-size:12px}
+.results{display:grid;gap:12px}
+.card{border-top:1px solid var(--border);padding:20px 2px 18px}
+.card:first-child{border-top:0;padding-top:4px}
+.cardtop{display:flex;justify-content:space-between;gap:20px}
+.card h2{font-size:17px;margin:0 0 5px;letter-spacing:-.015em}
+.publisher{font-size:11px;color:#758a9d}
+.score{text-align:right;color:#f7da84;font-size:11px;white-space:nowrap}
+.score b{font-size:19px;display:block;line-height:1}
+.summary{font-size:13px;color:#adbdcb;line-height:1.6;margin:11px 0}
+.why{font-size:12px;color:#8498aa;margin-bottom:10px}
+.why b{color:#aebdca}
+.meta{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:11px;color:#71869a}
+.tag{border:1px solid #24313e;background:#0d131a;padding:4px 6px;border-radius:5px}
+.source-link{color:var(--blue);font-weight:650}
+.warning{color:#d7b46b}
+footer{border-top:1px solid var(--border);padding:24px 0;color:#65798b;font-size:11px}
+@media(max-width:700px){
+  .shell{padding:0 16px}.brand span:last-child{display:none}.nav{gap:10px}
+  .answerhead,.cardtop{align-items:flex-start}.resultcount{width:100%;margin-left:0}.score{min-width:56px}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="shell nav">
+    <a class="brand" href="#"><span class="mark">◆</span><span>PeopleSoft Gems</span></a>
+    <div class="searchbar">
+      <input id="q" value="Integration Broker REST service returns HTTP 500" />
+      <button onclick="searchDemo()">Search</button>
+    </div>
+  </div>
+</header>
+
+<main class="shell page">
+  <div class="mode">
+    <button class="active">Search Gems</button>
+    <button>Ask PeopleSoft Gems</button>
+  </div>
+
+  <div class="queryline">Results for <strong>Integration Broker REST service returns HTTP 500</strong></div>
+
+  <section class="answer">
+    <div class="answerhead">
+      <strong>Source-backed troubleshooting snapshot</strong>
+      <span class="badge">3 Oracle sources</span>
+    </div>
+    <p>An HTTP 500 returned by an external system can surface in Integration Broker as an HTTP target connector gateway exception. Start by locating the exact transaction and collecting gateway-level evidence before changing configuration.</p>
+    <ol>
+      <li>Check the transaction in <b>Service Operations Monitor</b>.</li>
+      <li>Inspect the <b>integration gateway message/error logs</b> for the outbound request and returned response.</li>
+      <li>If needed, enable gateway logging for the monitored transaction and reproduce the failure.</li>
+      <li>Determine whether the 500 originated from PeopleSoft processing, the gateway, or the external endpoint.</li>
+    </ol>
+    <div class="cite">Sources: Oracle PeopleTools 8.63 Integration Broker documentation [1] [2] [3]</div>
+    <div class="ai-note"><b>AI diagnostic suggestion:</b> After capturing the actual outbound request, compare its URL, method, headers, authentication and payload with the known-good request from Postman. This is an interpretation/recommendation, not a direct Oracle documentation claim.</div>
+  </section>
+
+  <div class="filters">
+    <button class="filter active">Best Match</button>
+    <button class="filter">Integration Broker</button>
+    <button class="filter">Oracle Docs</button>
+    <button class="filter">PeopleTools 8.63</button>
+    <button class="filter">Has example</button>
+    <span class="resultcount">6 relevant Gems</span>
+  </div>
+
+  <section class="results">
+    <article class="card">
+      <div class="cardtop">
+        <div>
+          <h2>Integration Gateway Exception Types</h2>
+          <div class="publisher">Oracle · PeopleTools 8.63 · Integration Broker</div>
+        </div>
+        <div class="score"><b>97</b>Gem Score</div>
+      </div>
+      <p class="summary">Defines Integration Broker gateway exception categories and states that the HTTP target connector can generate an exception when an external system returns HTTP status 500.</p>
+      <div class="why"><b>Why useful:</b> Confirms what an external HTTP 500 looks like at the PeopleSoft gateway layer.</div>
+      <div class="meta"><span class="tag">HTTP</span><span class="tag">Gateway</span><span class="tag">REST</span><span>Checked Nov 2026</span><a class="source-link" href="https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/integration-gateway-exception-types.html" target="_blank">Open source ↗</a></div>
+    </article>
+
+    <article class="card">
+      <div class="cardtop">
+        <div>
+          <h2>Handling Common Integration Broker Issues</h2>
+          <div class="publisher">Oracle · PeopleTools 8.63 · Integration Broker</div>
+        </div>
+        <div class="score"><b>95</b>Gem Score</div>
+      </div>
+      <p class="summary">Oracle troubleshooting table covering application server exceptions, message handlers, Integration Gateway settings, gateway message logs, paused queues and Service Operations Monitor checks.</p>
+      <div class="why"><b>Why useful:</b> Gives the shortest authoritative checklist for deciding where an Integration Broker failure lives.</div>
+      <div class="meta"><span class="tag">Troubleshooting</span><span class="tag">Service Operations Monitor</span><span class="tag">Logs</span><span>Checked Nov 2026</span><a class="source-link" href="https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/handling-common-issues.html" target="_blank">Open source ↗</a></div>
+    </article>
+
+    <article class="card">
+      <div class="cardtop">
+        <div>
+          <h2>Enable Integration Gateway Message Logging</h2>
+          <div class="publisher">Oracle · PeopleTools 8.63 · Service Operations Monitor</div>
+        </div>
+        <div class="score"><b>94</b>Gem Score</div>
+      </div>
+      <p class="summary">Shows how to enable gateway logging from Monitor Setup Options and select an on-demand logging level for Integration Broker transactions.</p>
+      <div class="why"><b>Why useful:</b> Lets a developer collect the real request/response evidence required to troubleshoot an HTTP 500.</div>
+      <div class="meta"><span class="tag">Gateway Logging</span><span class="tag">Diagnostics</span><span>Checked Nov 2026</span><a class="source-link" href="https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker-service-operations-monitor/enabling-integration-gateway-message-logging-service-operations-monitor.html" target="_blank">Open source ↗</a></div>
+    </article>
+
+    <article class="card">
+      <div class="cardtop">
+        <div>
+          <h2>PeopleSoft Integration Broker — Overview</h2>
+          <div class="publisher">Oracle · PeopleTools 8.63</div>
+        </div>
+        <div class="score"><b>91</b>Gem Score</div>
+      </div>
+      <p class="summary">Explains the Integration Gateway and Integration Engine split, including PeopleSoft's role in consuming and invoking third-party services.</p>
+      <div class="why"><b>Why useful:</b> Helps isolate whether investigation belongs at the web-server gateway layer or application-server integration engine layer.</div>
+      <div class="meta"><span class="tag">Architecture</span><span class="tag">Integration Broker</span><span>Checked Nov 2026</span><a class="source-link" href="https://docs.oracle.com/en/applications/peoplesoft/peopletools/8.63/integration-broker/introduction-peoplesoft-integration-broker.html" target="_blank">Open source ↗</a></div>
+    </article>
+  </section>
+</main>
+
+<footer><div class="shell">PeopleSoft Gems · Search Results V1 prototype · Original sources remain authoritative.</div></footer>
+<script>
+function searchDemo(){
+  const q=document.getElementById('q').value.trim();
+  if(q) alert('V1 prototype — next step is wiring this query to the Gem dataset and hybrid search.');
+}
+</script>
+</body>
+</html>
