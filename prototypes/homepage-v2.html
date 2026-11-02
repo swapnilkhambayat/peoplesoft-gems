@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PeopleSoft Gems — Simple V2</title>
+  <style>
+    :root{--bg:#0b0f14;--panel:#111720;--border:#283341;--text:#eef4fb;--muted:#8fa1b3;--accent:#f6c453;--accent-hover:#ffd36b}
+    *{box-sizing:border-box}
+    body{margin:0;min-height:100vh;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    a{color:inherit;text-decoration:none}button,input{font:inherit}.shell{max-width:1040px;margin:0 auto;padding:0 24px}
+    header{height:64px;border-bottom:1px solid var(--border);display:flex;align-items:center}.nav{width:100%;display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:750;letter-spacing:-.02em}.mark{width:27px;height:27px;border:1px solid #76652f;border-radius:7px;display:grid;place-items:center;color:var(--accent);font-size:14px}
+    .links{display:flex;gap:22px;color:var(--muted);font-size:13px}.links a:hover{color:var(--text)}main{min-height:calc(100vh - 64px);display:flex;align-items:center}.hero{width:100%;padding:72px 0 96px}
+    h1{margin:0;max-width:720px;font-size:clamp(44px,7vw,72px);line-height:1.02;letter-spacing:-.055em}.accent{color:var(--accent)}.sub{margin:18px 0 0;max-width:650px;color:var(--muted);font-size:18px;line-height:1.6}
+    .mode{display:flex;gap:18px;margin-top:34px;font-size:13px;color:var(--muted)}.mode button{background:none;border:0;padding:0 0 7px;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}.mode button.active{color:var(--text);border-color:var(--accent)}
+    .search{margin-top:12px;max-width:830px;display:flex;gap:10px;padding:9px;border:1px solid #394655;background:var(--panel);border-radius:14px}.search:focus-within{border-color:#7d6a32}.search input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--text);padding:12px;font-size:16px}.search button{border:0;border-radius:9px;background:var(--accent);color:#171208;font-weight:800;padding:0 18px;cursor:pointer}.search button:hover{background:var(--accent-hover)}
+    .examples{margin-top:16px;max-width:820px;color:#6f8295;font-size:12px;line-height:1.9}.examples span{cursor:pointer;margin-right:14px}.examples span:hover{color:#b6c3cf}.topics{margin-top:48px;max-width:820px;border-top:1px solid var(--border);padding-top:20px;display:flex;align-items:center;gap:16px 22px;flex-wrap:wrap;font-size:13px}.topics strong{color:#9eacba;font-size:12px;font-weight:600;margin-right:2px}.topics a{color:#75899d}.topics a:hover{color:var(--text)}
+    .note{margin-top:26px;max-width:760px;color:#5f7386;font-size:11px}#status{display:none;margin-top:12px;color:#9ecbff;font-size:12px}
+    @media(max-width:680px){.links a:nth-child(2),.links a:nth-child(3){display:none}main{align-items:flex-start}.hero{padding-top:60px}.search{flex-direction:column}.search button{padding:13px}.topics{align-items:flex-start}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell nav">
+      <a href="#" class="brand"><span class="mark">◆</span><span>PeopleSoft Gems</span></a>
+      <nav class="links"><a href="#">Browse</a><a href="#">About</a><a href="#">How it works</a></nav>
+    </div>
+  </header>
+  <main>
+    <section class="shell hero">
+      <h1>Find the right <span class="accent">PeopleSoft answer.</span></h1>
+      <p class="sub">Search curated PeopleSoft technical resources and get source-backed troubleshooting guidance.</p>
+      <div class="mode"><button class="active" id="searchTab" onclick="setMode('search')">Search Gems</button><button id="askTab" onclick="setMode('ask')">Ask PeopleSoft Gems</button></div>
+      <div class="search"><input id="query" placeholder="Integration Broker REST service returns HTTP 500" aria-label="Search PeopleSoft Gems" /><button onclick="runSearch()" id="actionButton">Search</button></div>
+      <div id="status"></div>
+      <div class="examples">Try: <span onclick="fillQuery('Component Interface Save() returns False')">CI Save() returns False</span><span onclick="fillQuery('How do I call an external REST API from PeopleCode?')">Call REST API from PeopleCode</span><span onclick="fillQuery('Application Engine runs successfully but does not insert rows')">AE not inserting rows</span></div>
+      <div class="topics"><strong>Browse:</strong><a href="#">PeopleCode</a><a href="#">Integration Broker</a><a href="#">Application Engine</a><a href="#">Component Interface</a><a href="#">SQL</a><a href="#">PeopleTools</a></div>
+      <p class="note">PeopleSoft Gems keeps original sources visible and distinguishes source-backed information from AI interpretation.</p>
+    </section>
+  </main>
+  <script>
+    let mode='search';
+    function setMode(nextMode){mode=nextMode;const searchTab=document.getElementById('searchTab');const askTab=document.getElementById('askTab');const query=document.getElementById('query');const button=document.getElementById('actionButton');searchTab.classList.toggle('active',mode==='search');askTab.classList.toggle('active',mode==='ask');if(mode==='search'){query.placeholder='Integration Broker REST service returns HTTP 500';button.textContent='Search'}else{query.placeholder='My REST service works in Postman but fails through Integration Broker';button.textContent='Ask'}query.focus()}
+    function fillQuery(text){const query=document.getElementById('query');query.value=text;query.focus()}
+    function runSearch(){const query=document.getElementById('query').value.trim();const status=document.getElementById('status');if(!query){status.textContent=mode==='search'?'Enter a PeopleSoft topic or technical problem.':'Enter the PeopleSoft problem you want to troubleshoot.';status.style.display='block';return}status.textContent=mode==='search'?`Prototype: searching Gems for “${query}”`:`Prototype: asking PeopleSoft Gems about “${query}”`;status.style.display='block'}
+    document.getElementById('query').addEventListener('keydown',e=>{if(e.key==='Enter')runSearch()});
+  </script>
+</body>
+</html>
